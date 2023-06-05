@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden; /* Evita el desbordamiento de contenido */
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000; /* Fondo del preloader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* Color del texto del preloader */
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 9999; /* Asegura que el preloader esté sobre el contenido */
+  mask-image: radial-gradient(circle, transparent 50%, black 50%); /* Máscara circular */
+  -webkit-mask-image: radial-gradient(circle, transparent 4%, #000 5%); /* Prefijo para WebKit */
+  animation-name: grow;
+  animation-duration: 10s;
+  mask-size: 100vw;
+  animation-fill-mode: infinite;
+  animation-iteration-count: infinite;
+  
+}
+
+/* Puedes agregar estilos adicionales según tus necesidades */
+@keyframes grow {
+  0% {}
+  50% {transform: scale(30);}
+  100% {transform: scale(1);}
+}
